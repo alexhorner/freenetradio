@@ -1,0 +1,64 @@
+[package]
+name = "freenetradio"
+version = "0.1.0"
+edition = "2021"
+description = "AI Built Rust firmware for WCH CH32V307V controllers to stream internet radio stations"
+license = "MIT"
+repository = "https://github.com/alexhorner/freenetradio"
+
+[dependencies]
+# default-features off to drop the HAL's `exti` feature: ir.rs installs its
+# own EXTI15_10 handler (the HAL's only wakes a task, too late for IR timing).
+ch32-hal = { git = "https://github.com/ch32-rs/ch32-hal", rev = "a0863ebcc1082f64e508b73d3b944f119b0db77b", default-features = false, features = [
+    "ch32v307vct6",
+    "rt",
+    "embassy",
+] }
+embassy-executor = { version = "0.10.0", features = ["platform-spin", "executor-thread"] }
+embassy-time = "0.5.1"
+embassy-net = { version = "0.9.1", features = ["tcp", "udp", "dns", "dhcpv4", "medium-ethernet", "proto-ipv4", "auto-icmp-echo-reply"] }
+embassy-sync = "0.8"
+embassy-futures = "0.1"
+embedded-io-async = "0.7"
+embedded-graphics = "0.8.1"
+static_cell = "2.1"
+critical-section = "1.2.0"
+portable-atomic = { version = "1", features = ["critical-section"] }
+qingke = "0.8"
+# Vendored with a patch that sums the decoder's frequency lines into bands for
+# the spectrum analyser (search "FreeNetRadio patch" in vendor/nanomp3-core/src).
+nanomp3-core = { path = "vendor/nanomp3-core", default-features = false }
+# TLS 1.3 client for https streams. Vendored with a patch (see
+# vendor/embedded-tls/src/connection.rs, "FreeNetRadio patch") so a certificate
+# split over several small records is skipped rather than rejected.
+embedded-tls = { path = "vendor/embedded-tls", default-features = false }
+
+[features]
+# Extra click/glitch diagnostics (decode errors, I2S underrun and DMA error
+# counters, shown in /stats). Off in the normal build.
+diag = []
+
+[profile.release]
+strip = false   # symbols aren't flashed; keep them for debugging
+lto = true
+opt-level = "s"
+debug = true
+
+# The MP3 decoder is the hot path: optimise it for speed, not size.
+[profile.release.package.nanomp3-core]
+opt-level = 3
+
+# P-256 key exchange blocks the executor during the TLS handshake (there's
+# no await inside the maths), so make it as quick as possible.
+[profile.release.package.p256]
+opt-level = 3
+[profile.release.package.primeorder]
+opt-level = 3
+[profile.release.package.elliptic-curve]
+opt-level = 3
+[profile.release.package.crypto-bigint]
+opt-level = 3
+
+[build-dependencies]
+flate2 = "1"
+

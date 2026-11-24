@@ -1,0 +1,13 @@
+[build]
+# No-atomics target, as ch32-hal's own examples use (see rust-toolchain.toml).
+target = "riscv32imfc-unknown-none-elf.json"
+# Flash-size savings: drop panic file/line strings and derived-Debug text.
+rustflags = ["-Zlocation-detail=none", "-Zfmt-debug=none", "-Cllvm-args=-inline-threshold=15"]
+
+[unstable]
+build-std = ["core"]
+build-std-features = ["optimize_for_size"]
+json-target-spec = true
+
+[target.riscv32imfc-unknown-none-elf]
+runner = "wlink flash"

@@ -1,0 +1,2 @@
+# Vendored third-party code keeps the line endings it shipped with.
+vendor/** -text

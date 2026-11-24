@@ -1,0 +1,95 @@
+aead|RustCrypto Developers|MIT/Apache-2.0
+aes|RustCrypto Developers|MIT/Apache-2.0
+aes-gcm|RustCrypto Developers|MIT/Apache-2.0
+az|Trevor Spiteri|MIT/Apache-2.0
+base16ct|RustCrypto Developers|MIT/Apache-2.0
+bit_field|Philipp Oppermann|MIT/Apache-2.0
+bitflags|The Rust Project Developers|MIT/Apache-2.0
+bitmaps|Bodil Stokke|MPL-2.0
+block-buffer|RustCrypto Developers|MIT/Apache-2.0
+byteorder|Andrew Gallant|Unlicense/MIT
+cfg-if|Alex Crichton|MIT/Apache-2.0
+ch32-hal|Andelf|MIT/Apache-2.0
+ch32-metapac|Andelf|MIT/Apache-2.0
+cipher|RustCrypto Developers|MIT/Apache-2.0
+const-oid|RustCrypto Developers|MIT/Apache-2.0
+cordyceps|Eliza Weisman|MIT
+critical-section|Rust Embedded contributors|MIT/Apache-2.0
+crypto-bigint|RustCrypto Developers|MIT/Apache-2.0
+crypto-common|RustCrypto Developers|MIT/Apache-2.0
+ctr|RustCrypto Developers|MIT/Apache-2.0
+der|RustCrypto Developers|MIT/Apache-2.0
+digest|RustCrypto Developers|MIT/Apache-2.0
+ecdsa|RustCrypto Developers|MIT/Apache-2.0
+elliptic-curve|RustCrypto Developers|MIT/Apache-2.0
+embassy-executor|Embassy contributors|MIT/Apache-2.0
+embassy-executor-timer-queue|Embassy contributors|MIT/Apache-2.0
+embassy-futures|Embassy contributors|MIT/Apache-2.0
+embassy-hal-internal|Embassy contributors|MIT/Apache-2.0
+embassy-net|Embassy contributors|MIT/Apache-2.0
+embassy-net-driver|Embassy contributors|MIT/Apache-2.0
+embassy-net-driver-channel|Embassy contributors|MIT/Apache-2.0
+embassy-sync|Embassy contributors|MIT/Apache-2.0
+embassy-time|Embassy contributors|MIT/Apache-2.0
+embassy-time-driver|Embassy contributors|MIT/Apache-2.0
+embassy-time-queue-utils|Embassy contributors|MIT/Apache-2.0
+embassy-usb-driver|Embassy contributors|MIT/Apache-2.0
+embedded-can|Rust Embedded contributors|MIT/Apache-2.0
+embedded-graphics|James Waples|MIT/Apache-2.0
+embedded-graphics-core|James Waples|MIT/Apache-2.0
+embedded-hal|The Embedded HAL Team|MIT/Apache-2.0
+embedded-hal-async|The Embedded HAL Team and Contributors|MIT/Apache-2.0
+embedded-hal-nb|Rust Embedded contributors|MIT/Apache-2.0
+embedded-io|Rust Embedded contributors|MIT/Apache-2.0
+embedded-io-async|Rust Embedded contributors|MIT/Apache-2.0
+embedded-nal|Jonathan 'theJPster' Pallant|MIT/Apache-2.0
+embedded-nal-async|Rust Embedded Community|MIT/Apache-2.0
+embedded-storage|Mathias Koch|MIT/Apache-2.0
+embedded-tls|Drogue IoT contributors|Apache-2.0
+ff|Sean Bowe|MIT/Apache-2.0
+float-cmp|Mike Dilger|MIT
+futures|Rust Project contributors|MIT/Apache-2.0
+futures-channel|Rust Project contributors|MIT/Apache-2.0
+futures-core|Rust Project contributors|MIT/Apache-2.0
+futures-io|Rust Project contributors|MIT/Apache-2.0
+futures-sink|Rust Project contributors|MIT/Apache-2.0
+futures-task|Rust Project contributors|MIT/Apache-2.0
+futures-util|Rust Project contributors|MIT/Apache-2.0
+generic-array|Bartłomiej Kamiński|MIT
+ghash|RustCrypto Developers|MIT/Apache-2.0
+group|Sean Bowe|MIT/Apache-2.0
+hash32|Jorge Aparicio|MIT/Apache-2.0
+heapless|Jorge Aparicio|MIT/Apache-2.0
+hkdf|RustCrypto Developers|MIT/Apache-2.0
+hmac|RustCrypto Developers|MIT/Apache-2.0
+inout|RustCrypto Developers|MIT/Apache-2.0
+managed|whitequark|0BSD
+micromath|Tony Arcieri|MIT/Apache-2.0
+nanomp3-core|Robert B. Langer|MIT/Apache-2.0
+nb|Jorge Aparicio|MIT/Apache-2.0
+num-traits|The Rust Project Developers|MIT/Apache-2.0
+opaque-debug|RustCrypto Developers|MIT/Apache-2.0
+p256|RustCrypto Developers|MIT/Apache-2.0
+pin-project-lite|Taiki Endo|MIT/Apache-2.0
+polyval|RustCrypto Developers|MIT/Apache-2.0
+portable-atomic|Taiki Endo|MIT/Apache-2.0
+primeorder|RustCrypto Developers|MIT/Apache-2.0
+qingke|Andelf|MIT/Apache-2.0
+qingke-rt|Andelf|MIT/Apache-2.0
+rand_core|The Rand Project Developers|MIT/Apache-2.0
+rfc6979|RustCrypto Developers|MIT/Apache-2.0
+riscv|The RISC-V Team|MIT/Apache-2.0
+riscv-types|The RISC-V Team|MIT/Apache-2.0
+sdio-host|Johan Kristell|MIT/Apache-2.0
+sec1|RustCrypto Developers|MIT/Apache-2.0
+sha2|RustCrypto Developers|MIT/Apache-2.0
+signature|RustCrypto Developers|MIT/Apache-2.0
+smoltcp|whitequark|0BSD
+stable_deref_trait|Robert Grosse|MIT/Apache-2.0
+static_cell|Embassy contributors|MIT/Apache-2.0
+subtle|Isis Lovecruft|BSD-3-Clause
+typenum|paholg|MIT/Apache-2.0
+universal-hash|RustCrypto Developers|MIT/Apache-2.0
+vcell|Jorge Aparicio|MIT/Apache-2.0
+void|Jonathan Reem|MIT
+zeroize|RustCrypto Developers|MIT/Apache-2.0

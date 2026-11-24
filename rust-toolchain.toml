@@ -1,0 +1,9 @@
+# Nightly, for the custom riscv32imfc target (no "A" atomics extension) and
+# -Zbuild-std. QingKe V4's atomic instructions are suspected broken (the
+# qingke crate refuses to build with them unless overridden), and with them
+# this firmware intermittently lost task wake-ups: one task would stop
+# forever. Without the A extension every atomic becomes a critical section.
+[toolchain]
+channel = "nightly-2026-11-12"
+components = ["rust-src"]
+profile = "minimal"
